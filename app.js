@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-//-----------------------------------------------------------------------------------------
 
 // Function to show a specific tab
 function showTab(tabIndex) {
@@ -52,7 +51,6 @@ document.addEventListener('keydown', (event) => {
         showTab(2);
     }
 });
-
 
 //-----------------------------------------------------
 // Function to show specific probe buttons
@@ -77,29 +75,27 @@ function showAllProbes() {
 // Add event listeners to the buttons
 document.getElementById('button1').addEventListener('click', () => showProbes([4, 14]));
 document.getElementById('button2').addEventListener('click', () => showProbes([1, 2, 14]));
-document.getElementById('button3').addEventListener('click', () => showProbes([14]));
-document.getElementById('button4').addEventListener('click', () => showProbes([5, 6, 7, 8, 9,14]));
+document.getElementById('button3').addEventListener('click', () => showProbes([14,7]));
+document.getElementById('button4').addEventListener('click', () => showProbes([5, 6, 8, 9, 14]));
 document.getElementById('button10').addEventListener('click', () => showProbes([3, 14]));
-document.getElementById('button11').addEventListener('click', () => showProbes([10,11,13,14]));
-document.getElementById('button12').addEventListener('click', () => showProbes([11,12,13,14]));
-document.getElementById('button13').addEventListener('click', () => showProbes([11,13,14]));
+document.getElementById('button11').addEventListener('click', () => showProbes([10, 11, 13, 14]));
+document.getElementById('button12').addEventListener('click', () => showProbes([11, 12, 13, 14]));
+document.getElementById('button13').addEventListener('click', () => showProbes([11, 13, 14]));
 document.getElementById('button14').addEventListener('click', () => showProbes([14, 15]));
-
-
+document.getElementById('button222').addEventListener('click', () => showTab(2));
 
 // Add event listener for keyboard events
 document.addEventListener('keydown', (event) => {
     const key = event.key.toLowerCase();
     if (key === 'z') {
         showAllProbes();
-    } else if (key ==='1'){
+    } else if (key === '1') {
         document.getElementById('intro').click();
-    }else if (key ==='2'){
+    } else if (key === '2') {
         document.getElementById('manda').click();
-    }else if (key ==='3'){
+    } else if (key === '3') {
         document.getElementById('record').click();
-    }else if (key ==='4'){
+    } else if (key === '4') {
         document.getElementById('perma').click();
     }
-    
 });
